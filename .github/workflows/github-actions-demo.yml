@@ -47,6 +47,6 @@ jobs:
 #           user_name: ${{ secrets.USER_NAME_GITHUB }}
           user_name: ${{ github.actor }}
           destination_repo: 'Yasir-Tariq121/github-pages-target'
-          destination_folder: 'docs'
+          destination_folder: 'root'
 #           user_email: ${{ secrets.USER_EMAIL_GITHUB }}
           destination_branch: 'gh-pages'
