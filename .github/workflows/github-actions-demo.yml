@@ -12,9 +12,9 @@ jobs:
         env:
           var: "develop"
         run: |
-          echo env.dev_var
+          echo ${{ env.var }}
       - name: prod step
         env:
           var: "production"
         run: |
-          echo env.var
+          echo ${{ env.var }}
