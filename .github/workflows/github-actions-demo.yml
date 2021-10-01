@@ -8,13 +8,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: send file to other repo
-        uses: dmnemec/copy_file_to_another_repo_action@main
+      - name: dev step
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: 'pages/.'
-          user_name: ${{ github.actor }}
-          destination_repo: 'Yasir-Tariq121/github-pages-target'
-          # destination_folder: 'docs'
-          destination_branch: 'gh-pages'
+          var: "develop"
+        run: |
+          echo env.dev_var
+      - name: prod step
+        env:
+          var: "production"
+        run: |
+          echo env.var
